@@ -1,5 +1,5 @@
 class Vampire
-  attr_accessor :vampire_pop
+  # attr_accessor :vampire_pop
   # vampire_gestation = {}
 
   def initialize(vampire_pop,human_pop)
@@ -12,7 +12,6 @@ class Vampire
       puts "Vampire pop: #{@vampire_pop}"
       individual_vampire = *(1..@vampire_pop)
       individual_vampire.each {
-        # hour > 18 || hour < 6 ? attack_human(40,-20) : vampire_hunter(5,@vampire_pop)
         attack_human(20,-3) if hour > 18 || hour < 6
       }
     end
@@ -27,7 +26,7 @@ class Vampire
         @vampire_pop += 1
         @human_pop -= 1
       else
-        x = rand(1..2)
+        x = rand(1..3)
         @vampire_pop -= x
       end
     end
