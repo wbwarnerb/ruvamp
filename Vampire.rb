@@ -13,7 +13,7 @@ class Vampire
       individual_vampire = *(1..@vampire_pop)
       individual_vampire.each {
         # hour > 18 || hour < 6 ? attack_human(40,-20) : vampire_hunter(5,@vampire_pop)
-        attack_human(8,-3) if hour > 18 || hour < 6
+        attack_human(20,-3) if hour > 18 || hour < 6
       }
     end
     return @vampire_pop, @human_pop
